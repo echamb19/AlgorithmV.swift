@@ -11,9 +11,9 @@ import UIKit
 public class AlgorithmViewController: UIViewController
 {
    
-    @IBOutlet weak var UIImageView1: UIImageView!
+    @IBOutlet weak var algorithmText: UILabel!
     
-    @IBOutlet weak var Label1: UILabel!
+    @IBOutlet weak var algorithmView: UIImageView!
     
     public override func viewDidLoad() -> Void
     {
@@ -31,7 +31,31 @@ public class AlgorithmViewController: UIViewController
         let stepThree : String = "Put the Main.storyboard and the LaunchScreen.storyboard inside the View folder. The ViewController.swift should be put inside the Controller folder. The Assets.xcassets, AppDelegate.swift, and Info.plist segments should be put inside the Resources folder."
         let stepFour : String = "Click on your App’s name in the Navigation pane (Not the folder). In the identity section, click ‘Choose Info.plist File…’. Select your Info.plist file inside your resources folder in the popup screen. Click Main.storyboard in the Navigation pane, then click the project Name again. The identity section should not have the choice to choose an Info.plist file anymore."
         let stepFive : String = "Made a new .swift file in the Model folder and name it something relevant."
+        
+        let algorithm = [stepOne, stepTwo, stepThree, stepFour, stepFive]
+        
+        let attributesDictionary = [NSAttributedStringKey.font : algorithmText.font]
+        let fullAttributedString = NSMutableAttributedString (string: title, attributes: attributesDictionary)
+        
+        /*
+         v This sets up the bullet as the emoji and sets up the format of the words up ^
+        */
+        
+        for step in algorithm
+        {
+            let bullet : String = "🎃"
+            let formattedStep : String = "\n\(bullet) \(step)"
+            let sttributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let outlineStyle = createOutlineStyle()
+            
+            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range: NSMakeRange(0,attributedStringStep.length))
+            
+            fullAttributedString.append(attributedStringStep)
+        }
+        algorithmText.attributedText = fullAttributedString
+        
     }
+    
     
     private func createOutlineStyle() -> NSParagraphStyle
     {
@@ -45,5 +69,7 @@ public class AlgorithmViewController: UIViewController
         return outlineStyle
     }
 
+    
+    
 }
 

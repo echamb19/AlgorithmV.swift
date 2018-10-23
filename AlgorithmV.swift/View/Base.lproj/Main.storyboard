@@ -22,13 +22,18 @@
                                 <rect key="frame" x="0.0" y="335" width="375" height="128"/>
                                 <viewLayoutGuide key="safeArea" id="hBU-cs-eWg"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wei-M8-ODd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wei-M8-ODd">
                                 <rect key="frame" x="67" y="186" width="240" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="vHL-3Q-Au9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -47,6 +52,8 @@
                     <connections>
                         <outlet property="Label1" destination="wei-M8-ODd" id="VIQ-cK-FoG"/>
                         <outlet property="UIImageView1" destination="qoW-vA-9W2" id="K2a-xR-qJy"/>
+                        <outlet property="algorithmText" destination="wei-M8-ODd" id="9UQ-Ae-ZoY"/>
+                        <outlet property="algorithmView" destination="qoW-vA-9W2" id="obj-am-ic7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
