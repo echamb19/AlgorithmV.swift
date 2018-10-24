@@ -45,7 +45,7 @@ public class AlgorithmViewController: UIViewController
         {
             let bullet : String = "🎃"
             let formattedStep : String = "\n\(bullet) \(step)"
-            let sttributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
             let outlineStyle = createOutlineStyle()
             
             attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range: NSMakeRange(0,attributedStringStep.length))
