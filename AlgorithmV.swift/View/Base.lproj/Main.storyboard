@@ -18,43 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swiftSample" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-vA-9W2">
-                                <rect key="frame" x="0.0" y="335" width="375" height="128"/>
-                                <viewLayoutGuide key="safeArea" id="hBU-cs-eWg"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wei-M8-ODd">
-                                <rect key="frame" x="67" y="186" width="240" height="94"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wei-M8-ODd">
+                                <rect key="frame" x="9" y="20" width="350" height="260"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="vHL-3Q-Au9"/>
+                                    <constraint firstAttribute="height" constant="94" id="wyw-8P-yWg"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Hello. :)">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <font key="NSFont" size="12" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="swiftSample" translatesAutoresizingMaskIntoConstraints="NO" id="Kzc-tt-Axl">
+                                <rect key="frame" x="9" y="288" width="350" height="312"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wei-M8-ODd" firstAttribute="centerX" secondItem="qoW-vA-9W2" secondAttribute="centerX" id="1X9-24-cbN"/>
-                            <constraint firstItem="wei-M8-ODd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="166" id="5oC-cP-8XG"/>
-                            <constraint firstItem="qoW-vA-9W2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JOI-if-xgg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qoW-vA-9W2" secondAttribute="bottom" constant="204" id="LwX-tH-aWG"/>
-                            <constraint firstItem="qoW-vA-9W2" firstAttribute="top" secondItem="wei-M8-ODd" secondAttribute="bottom" constant="55" id="pdF-v2-T5g"/>
-                            <constraint firstAttribute="trailing" secondItem="qoW-vA-9W2" secondAttribute="trailing" id="q06-K0-xe7"/>
-                            <constraint firstItem="wei-M8-ODd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="sC9-ft-kZC"/>
+                            <constraint firstItem="wei-M8-ODd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="166" id="0aw-t7-gRv"/>
+                            <constraint firstItem="wei-M8-ODd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BmU-Vf-buK"/>
+                            <constraint firstItem="wei-M8-ODd" firstAttribute="trailing" secondItem="Kzc-tt-Axl" secondAttribute="trailing" id="IDl-zT-Ufu"/>
+                            <constraint firstItem="wei-M8-ODd" firstAttribute="leading" secondItem="Kzc-tt-Axl" secondAttribute="leading" id="YK7-tx-tXl"/>
+                            <constraint firstItem="Kzc-tt-Axl" firstAttribute="top" secondItem="wei-M8-ODd" secondAttribute="bottom" constant="8" symbolic="YES" id="ZZg-zb-8MA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kzc-tt-Axl" secondAttribute="bottom" constant="251" id="bof-ob-QrD"/>
+                            <constraint firstItem="wei-M8-ODd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="vai-z4-7fJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="Label1" destination="wei-M8-ODd" id="VIQ-cK-FoG"/>
-                        <outlet property="UIImageView1" destination="qoW-vA-9W2" id="K2a-xR-qJy"/>
                         <outlet property="algorithmText" destination="wei-M8-ODd" id="9UQ-Ae-ZoY"/>
-                        <outlet property="algorithmView" destination="qoW-vA-9W2" id="obj-am-ic7"/>
+                        <outlet property="algorithmView" destination="Kzc-tt-Axl" id="6fO-rp-TyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
